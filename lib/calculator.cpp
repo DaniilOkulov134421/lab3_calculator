@@ -44,7 +44,6 @@ char token_function (std::string str2);
 void read_function (void);
 
 #define EXPRESSION_UNDEFINED (read.empty())
-#define TOKEN_EMPTY (token[0]=='\0')
 #define SECOND_MEMBER_UNDEFINED (second_member!=second_member)
 double calculator(std::string read)
 {
@@ -56,13 +55,13 @@ double calculator(std::string read)
         return 0;
     }
     get_token();
-    if(TOKEN_EMPTY)
+    if(token.empty())
     {
         serror(NOT_EXPRESSION);
         return 0;
     }
     addition_subtraction(&answer);
-    if(!TOKEN_EMPTY)
+    if(!token.empty())
         serror(SYNTAX_ERROR);
     return answer;
 }
@@ -339,10 +338,7 @@ void clear_token(void)
     tok_type = 0;
 }
 
-
-
 #define MAX_SIZE_LINE_DOUBLE 320
-
 void read_num_of_expression(void)
 {
     int counter=0;

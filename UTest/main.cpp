@@ -9,7 +9,6 @@ int main(int argc, char** argv)
     return RUN_ALL_TESTS();
 }
 
-
 #define FLOW_CAPTURE(out_stream, ... ) \
     std::streambuf * old_stream = std::cout.rdbuf();\
     std::ostringstream out_stream;\
