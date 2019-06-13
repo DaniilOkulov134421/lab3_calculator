@@ -83,46 +83,6 @@ TEST(correct_input_parsing, valid_expression_4)
     ASSERT_TRUE(answer==17) << "not a true!";
 }
 
-
-/*
-int main(void)
-{
-
-    double answer=0;
-        char command;
-    char delimitr;
-    for(;;){
-        std::cout<<"---------\nw/-write expression\ns/-save answer\nr/-reciple answer\nl/-Saved list\ne/-exit\n";
-        command=getchar();
-        if(command!='\n')
-        {
-            delimitr=getchar();
-            if(delimitr!='\n')
-                for (;getchar()!='\n';);
-        }
-        if(delimitr=='/')
-            switch(command) {
-                case 'w':
-                    write_expression(&answer);
-                    break;
-                case 's':
-                    memory_write(answer);
-                    std::cout<<"Answer saved->"<<answer<<"\n";
-                    break;
-                case 'l':
-                    answers_list();
-                    break;
-                case 'r':
-                    reciple(&answer);
-                    break;
-                case 'e':
-                    return 0;
-                }
-        }
-    return 0;
-}
-*/
-
 void write_expression(double *answer)
 {
     std::string read_expression;
