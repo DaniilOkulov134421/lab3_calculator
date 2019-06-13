@@ -1,15 +1,15 @@
 #include "calculator.h"
 
-#define DELIMITER 1
-#define FUNCTION 2
-#define NUMBER 3
-
-#define SYNTAX_ERROR 0
-#define UNBALANCED_BACKETS 1
-#define NOT_EXPRESSION 2
-#define DIV_BY_ZERO 3
-#define MEMORY_ALLOC_ERROR 4
-#define SQRT_MINUS 5
+static const int
+    DELIMITER = 1,
+    FUNCTION = 2,
+    NUMBER = 3,
+    SYNTAX_ERROR = 0,
+    UNBALANCED_BACKETS = 1,
+    NOT_EXPRESSION = 2,
+    DIV_BY_ZERO = 3,
+    MEMORY_ALLOC_ERROR = 4,
+    SQRT_MINUS = 5;
 
 std::string::iterator expression;
 char tok_type;
